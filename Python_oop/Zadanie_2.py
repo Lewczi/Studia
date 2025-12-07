@@ -12,7 +12,8 @@ class Library:
 
 
 class Employee:
-    def __init__(self, first_name, last_name, hire_date, birth_date, city, street, zip_code, phone):
+    def __init__(self, first_name, last_name, hire_date,
+                 birth_date, city, street, zip_code, phone):
         self.first_name = first_name
         self.last_name = last_name
         self.hire_date = hire_date
@@ -31,6 +32,7 @@ class Student:
     """
     Klasa Student dodana, aby umożliwić stworzenie kompletnego obiektu Order.
     """
+
     def __init__(self, first_name, last_name, index_number):
         self.first_name = first_name
         self.last_name = last_name
@@ -41,7 +43,8 @@ class Student:
 
 
 class Book:
-    def __init__(self, library, publication_date, author_name, author_surname, number_of_pages):
+    def __init__(self, library, publication_date, author_name,
+                 author_surname, number_of_pages):
         self.library = library  # To jest obiekt klasy Library
         self.publication_date = publication_date
         self.author_name = author_name
@@ -63,7 +66,7 @@ class Order:
     def __str__(self):
         # Tworzymy napis opisujący wszystkie książki w zamówieniu
         books_description = "\n".join([str(book) for book in self.books])
-        
+
         return (f"================ ZAMÓWIENIE ================\n"
                 f"Data: {self.order_date}\n"
                 f"Obsługa: {self.employee}\n"
@@ -75,13 +78,47 @@ class Order:
 # --- TWORZENIE INSTANCJI (OBIEKTÓW) ---
 
 # 1. Stworzyć 2 biblioteki
-lib_warszawa = Library("Warszawa", "Marszałkowska 1", "00-001", "08:00-20:00", "22-111-22-33")
-lib_krakow = Library("Kraków", "Floriańska 15", "30-001", "09:00-17:00", "12-444-55-66")
+lib_warszawa = Library(
+    "Warszawa",
+    "Marszałkowska 1",
+    "00-001",
+    "08:00-20:00",
+    "22-111-22-33")
+lib_krakow = Library(
+    "Kraków",
+    "Floriańska 15",
+    "30-001",
+    "09:00-17:00",
+    "12-444-55-66")
 
 # 2. Stworzyć 3 pracowników
-emp1 = Employee("Jan", "Kowalski", "2020-01-10", "1985-05-12", "Warszawa", "Złota 44", "00-002", "500-100-100")
-emp2 = Employee("Anna", "Nowak", "2019-03-15", "1990-11-20", "Kraków", "Długa 5", "30-005", "600-200-200")
-emp3 = Employee("Piotr", "Wiśniewski", "2021-06-01", "1995-02-28", "Warszawa", "Wilcza 10", "00-003", "700-300-300")
+emp1 = Employee(
+    "Jan",
+    "Kowalski",
+    "2020-01-10",
+    "1985-05-12",
+    "Warszawa",
+    "Złota 44",
+    "00-002",
+    "500-100-100")
+emp2 = Employee(
+    "Anna",
+    "Nowak",
+    "2019-03-15",
+    "1990-11-20",
+    "Kraków",
+    "Długa 5",
+    "30-005",
+    "600-200-200")
+emp3 = Employee(
+    "Piotr",
+    "Wiśniewski",
+    "2021-06-01",
+    "1995-02-28",
+    "Warszawa",
+    "Wilcza 10",
+    "00-003",
+    "700-300-300")
 
 # 3. Stworzyć 3 studentów
 stud1 = Student("Michał", "Zieliński", "123456")

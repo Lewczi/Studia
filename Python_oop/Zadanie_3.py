@@ -4,9 +4,10 @@ class Property:
         Konstruktor klasy bazowej Property.
         """
         self.area = area       # Powierzchnia
-        self.rooms = int(rooms) # Liczba pokoi (wymuszamy int)
+        self.rooms = int(rooms)  # Liczba pokoi (wymuszamy int)
         self.price = price     # Cena
-        self.address = address # Adres
+        self.address = address  # Adres
+
 
 class House(Property):
     def __init__(self, area, rooms, price, address, plot):
@@ -21,6 +22,7 @@ class House(Property):
         return (f"Dom: Adres: {self.address}, Powierzchnia: {self.area} m2, "
                 f"Pokoje: {self.rooms}, Cena: {self.price}, Działka: {self.plot} m2")
 
+
 class Flat(Property):
     def __init__(self, area, rooms, price, address, floor):
         """
@@ -34,6 +36,7 @@ class Flat(Property):
                 f"Pokoje: {self.rooms}, Cena: {self.price}, Piętro: {self.floor}")
 
 # --- Tworzenie obiektów i wyświetlanie ---
+
 
 # 1. Stworzenie obiektu klasy House
 # Argumenty: area, rooms, price, address, plot
