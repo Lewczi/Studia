@@ -5,6 +5,7 @@ def wypisz_imiona(imiona):
     for imie in imiona:
         print(f"Imie: {imie}")
 
+
 # --- TEST ---
 if __name__ == "__main__":
     moja_lista = ["Ania", "Tomek", "Kasia", "Piotr", "Zosia"]

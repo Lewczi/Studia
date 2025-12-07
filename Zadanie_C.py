@@ -6,7 +6,7 @@ def wypisz_parzyste(liczby):
             print(liczba)
 
 
-dane = list(range(10)) 
+dane = list(range(10))
 print(f"Dane wejściowe: {dane}")
 
 wypisz_parzyste(dane)

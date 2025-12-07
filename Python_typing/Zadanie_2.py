@@ -1,4 +1,5 @@
-def mnożenie(a:int, b:int):
-    return print(a*b)
+def mnożenie(a: int, b: int):
+    return print(a * b)
 
-mnożenie(2,4)
+
+mnożenie(2, 4)
