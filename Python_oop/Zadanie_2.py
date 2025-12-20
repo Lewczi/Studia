@@ -75,9 +75,7 @@ class Order:
                 f"============================================")
 
 
-# --- TWORZENIE INSTANCJI (OBIEKTÓW) ---
 
-# 1. Stworzyć 2 biblioteki
 lib_warszawa = Library(
     "Warszawa",
     "Marszałkowska 1",
@@ -91,7 +89,7 @@ lib_krakow = Library(
     "09:00-17:00",
     "12-444-55-66")
 
-# 2. Stworzyć 3 pracowników
+
 emp1 = Employee(
     "Jan",
     "Kowalski",
@@ -120,27 +118,24 @@ emp3 = Employee(
     "00-003",
     "700-300-300")
 
-# 3. Stworzyć 3 studentów
+
 stud1 = Student("Michał", "Zieliński", "123456")
 stud2 = Student("Katarzyna", "Wójcik", "654321")
 stud3 = Student("Tomasz", "Mazur", "987654")
 
-# 4. Stworzyć 5 książek
-# Przypisujemy obiekty bibliotek do książek
+
 book1 = Book(lib_warszawa, "2022", "J.K.", "Rowling", 300)
 book2 = Book(lib_warszawa, "1954", "J.R.R.", "Tolkien", 450)
 book3 = Book(lib_krakow, "1949", "George", "Orwell", 200)
 book4 = Book(lib_krakow, "2001", "Yann", "Martel", 320)
 book5 = Book(lib_warszawa, "1925", "F. Scott", "Fitzgerald", 180)
 
-# 5. Stworzyć 2 zamówienia
-# Zamówienie 1: Jan Kowalski obsługuje Michała Zielińskiego (2 książki)
+
 order1 = Order(emp1, stud1, [book1, book2], "2023-10-27")
 
-# Zamówienie 2: Anna Nowak obsługuje Katarzynę Wójcik (1 książka)
 order2 = Order(emp2, stud2, [book3], "2023-10-28")
 
-# --- WYŚWIETLANIE ---
+
 
 print(order1)
 print()

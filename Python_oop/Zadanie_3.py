@@ -35,17 +35,14 @@ class Flat(Property):
         return (f"Mieszkanie: Adres: {self.address}, Powierzchnia: {self.area} m2, "
                 f"Pokoje: {self.rooms}, Cena: {self.price}, Piętro: {self.floor}")
 
-# --- Tworzenie obiektów i wyświetlanie ---
 
 
-# 1. Stworzenie obiektu klasy House
-# Argumenty: area, rooms, price, address, plot
+
 dom = House(150, 5, 850000, "ul. Leśna 10, Warszawa", 600)
 
-# 2. Stworzenie obiektu klasy Flat
-# Argumenty: area, rooms, price, address, floor
+
 mieszkanie = Flat(65, 3, 550000, "al. Jerozolimskie 100/5, Warszawa", 4)
 
-# 3. Wyświetlenie obiektów (automatycznie wywoła metodę __str__)
+
 print(dom)
 print(mieszkanie)
