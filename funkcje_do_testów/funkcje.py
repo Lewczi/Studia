@@ -5,4 +5,4 @@ def is_palindrome(text: str) -> bool:
 
 
 def fibonacci(n: int) -> int: 
-    print("nic")
+    print("test")
