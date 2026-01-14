@@ -7,7 +7,7 @@ import os
 
 app = FastAPI()
 
-# Katalog na pliki tymczasowe pobrane z URL lub przesłane przez POST
+
 UPLOAD_DIR = "temp_uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
@@ -39,7 +39,7 @@ async def upload_file(file: UploadFile = File(...)):
     task = analyze_image_task.delay(file_path)
     return {"task_id": str(task.id), "status": "Zakolejkowano (Upload)"}
 
-# Endpoint do statusu (Wymagany na 4 i 5)
+
 @app.get("/status/{task_id}")
 async def get_status(task_id: str):
     res = AsyncResult(task_id)
