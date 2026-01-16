@@ -1,4 +1,9 @@
-import Book,Employee,Library,Order,Student
+
+from Library import Library
+from Employee import Employee
+from Student import Student
+from Book import Book
+from Order import Order
 
 lib_warszawa = Library(
     "Warszawa",
@@ -43,9 +48,9 @@ emp3 = Employee(
     "700-300-300")
 
 
-stud1 = Student("Michał", "Zieliński", "123456")
-stud2 = Student("Katarzyna", "Wójcik", "654321")
-stud3 = Student("Tomasz", "Mazur", "987654")
+stud1 = Student("Michał", "Zieliński",)
+stud2 = Student("Katarzyna", "Wójcik", )
+stud3 = Student("Tomasz", "Mazur",)
 
 
 book1 = Book(lib_warszawa, "2022", "J.K.", "Rowling", 300)

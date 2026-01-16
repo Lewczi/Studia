@@ -1,4 +1,4 @@
-import Student
+from Student import Student
 
 student_passed = Student("Anna Kowalska", [60, 70, 80])
 
