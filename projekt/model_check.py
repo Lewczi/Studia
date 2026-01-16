@@ -27,14 +27,13 @@ def main():
     print("Analizowanie...")
     detections = net.forward()
 
-    # 4. Rysowanie wyników
+ 
     count = 0
     for i in range(detections.shape[2]):
         confidence = float(detections[0, 0, i, 2])
         class_id = int(detections[0, 0, i, 1])
 
-        # ID 1 to 'person' w zbiorze COCO
-        # Ustawiamy próg pewności na 40% (0.4)
+        
         if confidence > 0.4 and class_id == 1:
             count += 1
             
@@ -43,14 +42,14 @@ def main():
             right = int(detections[0, 0, i, 5] * cols)
             bottom = int(detections[0, 0, i, 6] * rows)
 
-            # Rysowanie ramki (zielona)
+           
             cv.rectangle(img, (left, top), (right, bottom), (0, 255, 0), 2)
 
-            # Dodawanie opisu z %
+            
             label = f"Osoba: {confidence * 100:.1f}%"
             label_size, base_line = cv.getTextSize(label, cv.FONT_HERSHEY_SIMPLEX, 0.5, 1)
             
-            # Tło pod napis (żeby był czytelny)
+           
             y_label = max(top, label_size[1] + 10)
             cv.rectangle(img, (left, y_label - label_size[1] - 10), (left + label_size[0], y_label + base_line - 10), (255, 255, 255), cv.FILLED)
             cv.putText(img, label, (left, y_label - 7), cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 1)
@@ -58,18 +57,18 @@ def main():
     print(f"--- SUKCES! ---")
     print(f"Znaleziono obiektów: {count}")
 
-    # 5. Wyświetlenie i zapis
+    
     output_file = 'model_wynik.jpg'
     cv.imwrite(output_file, img)
     print(f"Wynik zapisano jako: {output_file} (sprawdź folder projektu)")
 
-    # Opcjonalnie wyświetl okienko (jeśli masz środowisko graficzne)
+    
     try:
         cv.imshow('Wynik detekcji', img)
         cv.waitKey(0)
         cv.destroyAllWindows()
     except:
-        pass # Ignoruj błąd jeśli nie ma ekranu (np. w Dockerze)
+        pass 
 
 if __name__ == '__main__':
     main()

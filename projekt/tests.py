@@ -3,7 +3,7 @@ import time
 
 # Konfiguracja
 API_URL = "http://127.0.0.1:8000/analyze"
-IMAGE_PATH = "klasa.jpeg"  #zdjecie
+IMAGE_PATH = "osoby.jpg"  #zdjecie
 LICEBA_ZADAN = 1000 
 
 print(f"Rozpoczynam wysyłanie {LICEBA_ZADAN} zadań do API...")
